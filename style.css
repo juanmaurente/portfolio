@@ -51,6 +51,16 @@ body {
   flex-wrap: nowrap;
   align-items: center;
 }
+@media only screen and (max-width: 576px) {
+  .navbar__links {
+    display: none;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+}
 .navbar__link > a {
   color: #c6c0be;
   text-decoration: none;
@@ -62,6 +72,9 @@ body {
   font-weight: bold;
   color: #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
+}
+.navbar__icon {
+  display: none;
 }
 
 /*--------------------------WELCOME ---------------- */
@@ -75,8 +88,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
   height: 100vh;
+}
+@media only screen and (max-width: 576px) {
+  .welcome__block {
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .welcome__block {
+    height: 60vh;
+  }
 }
 .welcome__title {
   color: #f2f2f2;
@@ -86,7 +108,6 @@ body {
 
 /*--------------------------ABOUT ---------------- */
 .about {
-  width: 100vw;
   height: 80vh;
   margin: 80px auto;
   display: flex;
@@ -94,8 +115,25 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 576px) {
+  .about {
+    height: 50vh;
+    margin: 20px auto;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .about {
+    height: 50vh;
+    margin: 20px auto;
+  }
+}
 .about__container {
-  width: 880px;
+  width: 80vw;
+}
+@media only screen and (max-width: 576px) {
+  .about__container {
+    width: 90vw;
+  }
 }
 .about__block {
   display: flex;
@@ -103,6 +141,7 @@ body {
 }
 .about__block--right {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -124,17 +163,44 @@ body {
 
 /*--------------------------PROJECTS ---------------- */
 .projects {
-  width: 880px;
-  height: 80vh;
+  width: 80vw;
   margin: 80px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media only screen and (max-width: 576px) {
+  .projects {
+    width: 80vw;
+    margin: 40px auto;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .projects {
+    width: 80vw;
+    margin: 40px auto;
+  }
+}
 .projects__gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+}
+@media only screen and (max-width: 576px) {
+  .projects__gallery {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .projects__gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .projects__gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
 }
 .projects__image {
   height: 250px;
@@ -152,6 +218,16 @@ body {
   cursor: pointer;
   filter: none;
   transform: scale(1.1);
+}
+@media only screen and (max-width: 576px) {
+  .projects__image {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .projects__image {
+    width: 35vw;
+  }
 }
 
 /*--------------------------CONTACT ---------------- */
@@ -185,6 +261,11 @@ body {
   font-family: "Source Code Pro";
   font-size: 14px;
   background-color: #f2f2f2;
+}
+@media only screen and (max-width: 576px) {
+  .contact__input {
+    width: 80vw;
+  }
 }
 .contact__icons {
   margin-top: 20px;
@@ -223,7 +304,7 @@ body {
 /*--------------------------Footer ---------------- */
 .footer {
   width: 100vw;
-  height: 80vh;
+  height: 60vh;
   background-color: #353440;
   display: flex;
   flex-direction: column;
