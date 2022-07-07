@@ -1,27 +1,21 @@
 @use './partials/devices';
 @use './partials/palette';
+@use './partials/placeholders';
 /*--------------------------GENERAL STYLING ---------------- */
 * {
 	margin: 0px;
 	padding: 0px;
 }
 
+html,
 body {
 	font-family: 'Source Code Pro', monospace;
 	background-color: #252426;
 	color: #c6c0be;
+	scroll-behavior: smooth;
 }
 
-/* Placeholder for title */
-%section-title {
-	font-family: 'Exo';
-	color: #fca4a4;
-	font-size: 25px;
-	letter-spacing: 2px;
-	font-weight: 300;
-	margin: 85px auto 25px auto;
-	text-align: center;
-}
+/*------ Placeholders ------ */
 
 .section__title {
 	@extend %section-title;
@@ -55,7 +49,9 @@ body {
 	}
 
 	&__links {
+		color: #fca4a4;
 		font-size: 16px;
+		font-weight: 300;
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
@@ -65,6 +61,10 @@ body {
 		}
 
 		@include devices.tablet {
+			display: none;
+		}
+
+		@include devices.tablet-landscape {
 			display: none;
 		}
 	}
@@ -90,54 +90,55 @@ body {
 
 /*--------------------------WELCOME ---------------- */
 .welcome {
+	@extend %section-body;
+
+	padding-top: 0px;
+	margin-top: 0px;
+	justify-content: left;
+	align-items: center;
 	background: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
 	background-size: cover;
 	filter: grayscale(35%);
+	padding-left: 100px;
 
-	&__block {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+	@include devices.phone {
+		justify-content: left;
 		align-items: center;
-		height: 100vh;
+		padding-left: 15px;
+	}
 
-		@include devices.phone {
-			height: 50vh;
-		}
+	@include devices.tablet {
+		justify-content: left;
+		align-items: center;
+	}
 
-		@include devices.tablet {
-			height: 60vh;
-		}
+	@include devices.tablet-landscape {
+		justify-content: left;
+		align-items: center;
+	}
+
+	@include devices.laptop {
+		justify-content: left;
+		align-items: center;
 	}
 
 	&__title {
 		color: #f2f2f2;
 		font-size: 35px;
 		font-weight: 500;
+
+		@include devices.phone {
+			font-size: 30px;
+		}
 	}
 }
 
 /*--------------------------ABOUT ---------------- */
 .about {
-	height: 80vh;
-	margin: 80px auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	@include devices.phone {
-		height: 50vh;
-		margin: 20px auto;
-	}
-
-	@include devices.tablet {
-		height: 50vh;
-		margin: 20px auto;
-	}
+	@extend %section-body;
 
 	&__container {
-		width: 80vw;
+		width: 50%;
 
 		@include devices.phone {
 			width: 90vw;
@@ -145,45 +146,75 @@ body {
 	}
 
 	&__block {
-		display: flex;
-		flex-direction: row;
+		display: inline-flex;
+
+		@include devices.phone {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include devices.tablet {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include devices.tablet-landscape {
+			width: 60vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
 		&--right {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: column;
 			justify-content: space-around;
-			align-items: center;
+			align-items: flex-start;
 			padding-left: 15px;
+
+			@include devices.phone {
+				padding-top: 15px;
+			}
 		}
+	}
+
+	&__img {
+		width: 450px;
+		height: 450px;
+		border-radius: 35px;
+		object-fit: cover;
+	}
+
+	&__text {
+		font-family: 'Exo';
+		font-size: 14px;
+		font-weight: 300;
 	}
 
 	&__techs {
 		width: 100%;
 		display: flex;
 		justify-content: space-around;
-	}
-
-	&__img {
-		width: 200px;
-		object-fit: cover;
-	}
-
-	&__text {
-		font-size: 14px;
-		font-weight: 300;
+		padding-top: 20px;
 	}
 }
 
 /*--------------------------PROJECTS ---------------- */
 .projects {
-	width: 80vw;
-	margin: 80px auto;
-	display: flex;
+	@extend %section-body;
 	flex-direction: column;
-	justify-content: center;
+	width: 60vw;
+	height: 100%;
 
 	@include devices.phone {
+		width: 80vw;
+		margin: 40px auto;
+	}
+
+	@include devices.tablet {
 		width: 80vw;
 		margin: 40px auto;
 	}
@@ -207,8 +238,7 @@ body {
 		}
 
 		@include devices.tablet-landscape {
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-gap: 20px;
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 
@@ -231,10 +261,14 @@ body {
 		}
 
 		@include devices.phone {
-			width: 80vw;
+			width: 70vw;
 		}
 
 		@include devices.tablet {
+			width: 35vw;
+		}
+
+		@include devices.tablet-landscape {
 			width: 35vw;
 		}
 	}
@@ -242,11 +276,8 @@ body {
 
 /*--------------------------CONTACT ---------------- */
 .contact {
-	margin: 80px auto;
-	height: 80vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	@extend %section-body;
+	height: 100%;
 
 	&__container {
 		margin: 0px auto;

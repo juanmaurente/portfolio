@@ -1,26 +1,69 @@
-/*--------------------------GENERAL STYLING ---------------- */
-* {
-  margin: 0px;
-  padding: 0px;
-}
+/* 
+------ Color Pallete
+#252426 - Raisin Black
+#353440 - Jet
+#747c8c - Slate Gray
+#C6C0BE - Pale Silver
+#f2f2f2 - Cultured
+#fca4a4 - Light Pink
 
-body {
-  font-family: "Source Code Pro", monospace;
-  background-color: #252426;
-  color: #c6c0be;
-}
-
-/* Placeholder for title */
+------- Fonts 
+Source Code Pro
+*/
 .section__title {
   font-family: "Exo";
   color: #fca4a4;
   font-size: 25px;
   letter-spacing: 2px;
   font-weight: 300;
-  margin: 85px auto 25px auto;
+  margin: 50px auto;
   text-align: center;
 }
 
+/* change to mixin */
+.welcome, .about, .projects, .contact {
+  height: 100vh;
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 75px;
+}
+@media only screen and (max-width: 576px) {
+  .welcome, .about, .projects, .contact {
+    height: 60vh;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .welcome, .about, .projects, .contact {
+    height: 70vh;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .welcome, .about, .projects, .contact {
+    height: 70vh;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .welcome, .about, .projects, .contact {
+    height: 80vh;
+  }
+}
+
+/*--------------------------GENERAL STYLING ---------------- */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  font-family: "Source Code Pro", monospace;
+  background-color: #252426;
+  color: #c6c0be;
+  scroll-behavior: smooth;
+}
+
+/*------ Placeholders ------ */
 /*--------------------------NAVBAR ---------------- */
 .navbar {
   position: sticky;
@@ -46,7 +89,9 @@ body {
   font-weight: 300;
 }
 .navbar__links {
+  color: #fca4a4;
   font-size: 16px;
+  font-weight: 300;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -57,6 +102,11 @@ body {
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
   .navbar__links {
     display: none;
   }
@@ -79,25 +129,38 @@ body {
 
 /*--------------------------WELCOME ---------------- */
 .welcome {
+  padding-top: 0px;
+  margin-top: 0px;
+  justify-content: left;
+  align-items: center;
   background: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
   background-size: cover;
   filter: grayscale(35%);
-}
-.welcome__block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding-left: 100px;
 }
 @media only screen and (max-width: 576px) {
-  .welcome__block {
-    height: 50vh;
+  .welcome {
+    justify-content: left;
+    align-items: center;
+    padding-left: 15px;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .welcome__block {
-    height: 60vh;
+  .welcome {
+    justify-content: left;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .welcome {
+    justify-content: left;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .welcome {
+    justify-content: left;
+    align-items: center;
   }
 }
 .welcome__title {
@@ -105,30 +168,15 @@ body {
   font-size: 35px;
   font-weight: 500;
 }
+@media only screen and (max-width: 576px) {
+  .welcome__title {
+    font-size: 30px;
+  }
+}
 
 /*--------------------------ABOUT ---------------- */
-.about {
-  height: 80vh;
-  margin: 80px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@media only screen and (max-width: 576px) {
-  .about {
-    height: 50vh;
-    margin: 20px auto;
-  }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .about {
-    height: 50vh;
-    margin: 20px auto;
-  }
-}
 .about__container {
-  width: 80vw;
+  width: 50%;
 }
 @media only screen and (max-width: 576px) {
   .about__container {
@@ -136,40 +184,74 @@ body {
   }
 }
 .about__block {
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+}
+@media only screen and (max-width: 576px) {
+  .about__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .about__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .about__block {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .about__block--right {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   padding-left: 15px;
+}
+@media only screen and (max-width: 576px) {
+  .about__block--right {
+    padding-top: 15px;
+  }
+}
+.about__img {
+  width: 450px;
+  height: 450px;
+  border-radius: 35px;
+  object-fit: cover;
+}
+.about__text {
+  font-family: "Exo";
+  font-size: 14px;
+  font-weight: 300;
 }
 .about__techs {
   width: 100%;
   display: flex;
   justify-content: space-around;
-}
-.about__img {
-  width: 200px;
-  object-fit: cover;
-}
-.about__text {
-  font-size: 14px;
-  font-weight: 300;
+  padding-top: 20px;
 }
 
 /*--------------------------PROJECTS ---------------- */
 .projects {
-  width: 80vw;
-  margin: 80px auto;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 60vw;
+  height: 100%;
 }
 @media only screen and (max-width: 576px) {
+  .projects {
+    width: 80vw;
+    margin: 40px auto;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
   .projects {
     width: 80vw;
     margin: 40px auto;
@@ -198,8 +280,7 @@ body {
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .projects__gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 .projects__image {
@@ -221,7 +302,7 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .projects__image {
-    width: 80vw;
+    width: 70vw;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
@@ -229,14 +310,15 @@ body {
     width: 35vw;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .projects__image {
+    width: 35vw;
+  }
+}
 
 /*--------------------------CONTACT ---------------- */
 .contact {
-  margin: 80px auto;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
 }
 .contact__container {
   margin: 0px auto;
