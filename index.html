@@ -128,7 +128,12 @@
 
 			<section id="contact" class="contact">
 				<div class="contact__container">
-					<form class="contact__form" onsubmit="">
+					<form
+						class="contact__form"
+						target="_blank"
+						action="https://formspree.io/f/moqrzryq"
+						method="POST"
+					>
 						<h2 class="section__title">Contact</h2>
 
 						<label class="contact__label" for="email"
@@ -140,6 +145,7 @@
 							name="email"
 							id="email"
 							placeholder="Your email..."
+							required
 						/>
 
 						<label class="contact__label" for="fullName"
@@ -151,6 +157,7 @@
 							name="fullName"
 							id="fullName"
 							placeholder="Your name..."
+							required
 						/>
 
 						<label class="contact__label" for="message"
@@ -163,6 +170,7 @@
 							cols="60"
 							rows="5"
 							placeholder="Please leave your message here..."
+							required
 						></textarea>
 
 						<button
