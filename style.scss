@@ -32,6 +32,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	height: 75px;
+	overflow: hidden;
 
 	&__logo {
 		color: #fca4a4;
@@ -70,22 +71,24 @@ body {
 		}
 	}
 
-	&__link > a {
-		color: #c6c0be;
-		text-decoration: none;
-		padding: 15px 10px;
-		border-radius: 4px;
+	&__link {
+		& > a {
+			color: #c6c0be;
+			text-decoration: none;
+			padding: 15px 10px;
+			border-radius: 4px;
+			display: block;
 
-		&:hover {
-			background-color: #747c8c;
-			font-weight: bold;
-			color: #f2f2f2;
-			border-bottom: 1px solid #f2f2f2;
+			&:hover {
+				background-color: #747c8c;
+				font-weight: bold;
+				color: #f2f2f2;
+				border-bottom: 1px solid #f2f2f2;
+			}
 		}
-	}
-
-	&__icon {
-		display: none;
+		&--icon {
+			display: none;
+		}
 	}
 }
 
@@ -262,7 +265,7 @@ body {
 		position: fixed;
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 0.87);
 		height: 100%;
 		width: 100%;
 		z-index: 10;

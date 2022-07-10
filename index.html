@@ -18,17 +18,12 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<nav class="navbar">
+		<nav class="navbar" id="navbar">
 			<div class="navbar__logo">
 				<h2 class="navbar__logo--thick">Juan</h2>
 				<h2 class="navbar__logo--thin">Maurente</h2>
 			</div>
 			<div class="navbar__links">
-				<div class="navbar__link navbar__link--home">
-					<a href="#"
-						><i class="navbar__icon fa-solid fa-bars" disabled></i
-					></a>
-				</div>
 				<div class="navbar__link navbar__link--home">
 					<a href="#welcome">&lt;HOME/&gt;</a>
 				</div>
@@ -40,6 +35,11 @@
 				</div>
 				<div class="navbar__link">
 					<a href="#contact">&lt;CONTACT/&gt;</a>
+				</div>
+				<div class="navbar__link--icon">
+					<a href="index.js" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
 				</div>
 			</div>
 		</nav>

@@ -70,6 +70,7 @@ body {
   display: flex;
   justify-content: space-around;
   height: 75px;
+  overflow: hidden;
 }
 .navbar__logo {
   color: #fca4a4;
@@ -112,6 +113,7 @@ body {
   text-decoration: none;
   padding: 15px 10px;
   border-radius: 4px;
+  display: block;
 }
 .navbar__link > a:hover {
   background-color: #747c8c;
@@ -119,7 +121,7 @@ body {
   color: #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
 }
-.navbar__icon {
+.navbar__link--icon {
   display: none;
 }
 
@@ -333,7 +335,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.87);
   height: 100%;
   width: 100%;
   z-index: 10;
