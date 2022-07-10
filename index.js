@@ -1,7 +1,11 @@
-let photo = document.querySelectorAll('.projects__photo');
+document.querySelectorAll('.projects__gallery img').forEach((image) => {
+	image.onclick = () => {
+		document.querySelector('.projects__popup').style.display = 'block';
+		document.querySelector('.projects__popup img').src =
+			image.getAttribute('src');
+	};
+});
 
-photo.forEach((popup) =>
-	popup.addEventListener('click', () => {
-		popup.classList.toggle('projects__imgBox--active');
-	}),
-);
+document.querySelector('.projects__popup span').onclick = () => {
+	document.querySelector('.projects__popup').style.display = 'none';
+};
