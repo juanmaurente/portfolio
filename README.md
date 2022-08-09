@@ -13,15 +13,15 @@ I followed a basic landing page structure:
 In terms of design, I tried keep a modern and clean site. Using a font from Google Fonts and a custom color palette.
 ![image](https://user-images.githubusercontent.com/26740359/183779931-f7d58203-6c84-499c-8a02-6d8bef91c407.png)
 ![image](https://user-images.githubusercontent.com/26740359/183779966-a22767be-935f-4406-8be8-74c3e32f9e6d.png)
-
 ![image](https://user-images.githubusercontent.com/26740359/183779882-d08bc188-bfd2-4b1c-96d4-f27ab9c90fb7.png)
 
 
-## Issues and things to improve
+## Issues, things to improve and Challenges to be done by the end of the program
 - Navbar bars in smaller screens is not working
 - Size of containers need to improve for smaller sizes
 - Spacing has to improve
 - Recreate this site using React and a no-code platform (WebFlow)
+- Store each project in a database collection (firebase) and fetch data.
 
 
 
