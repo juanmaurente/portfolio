@@ -1,6 +1,6 @@
 # PORTFOLIO
 
-This is the first project of our program. I looked to introduce all concepts of HTML, CSS & SASS we covered. 
+This is the first project of our program. I looked to introduce all concepts of HTML, CSS, SASS and JavaScript we covered. 
 I followed a basic landing page structure:
 -   Welcome Message
 -   Navbar
