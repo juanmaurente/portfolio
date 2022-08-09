@@ -1,6 +1,6 @@
 # PORTFOLIO
 
-This is the first project of our program. I looked to introduce all concepts of HTML, CSS, SASS and JavaScript we covered. 
+This is the first project of our program. I looked to introduce all concepts of HTML, CSS, SASS and JavaScript we covered. Additionally, I use Formspree to handle Contact form.
 I followed a basic landing page structure:
 -   Welcome Message
 -   Navbar
