@@ -35,6 +35,9 @@ In terms of design, I tried keep a modern and clean site. Using a font from Goog
 - Store each project in a database collection (firebase) and fetch data.
 
 
+
+
+# About the Project
 ## Outline
 
 It is time to put what you have been learning to the test here is your project brief!
