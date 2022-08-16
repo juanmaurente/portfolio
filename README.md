@@ -1,6 +1,7 @@
 # PORTFOLIO
 
-This is the first project of our program. I looked to introduce all concepts of HTML, CSS, SASS and JavaScript we covered. Additionally, I use Formspree to handle Contact form, GitHub and Jira to organize the process. 
+This is the first project of our program. 
+
 I followed a basic landing page structure:
 -   Welcome Message
 -   Navbar
@@ -8,6 +9,15 @@ I followed a basic landing page structure:
 -   Projects
 -   Contact
 -   Footer
+
+## Languages and Tools
+- HTML
+- CSS
+- JavaScript
+- SASS
+- Formspree
+- Github
+- Jira
 
 ## Design
 In terms of design, I tried keep a modern and clean site. Using a font from Google Fonts and a custom color palette.
@@ -17,12 +27,12 @@ In terms of design, I tried keep a modern and clean site. Using a font from Goog
 
 
 ## Issues, things to improve and Challenges to be done by the end of the program
-- Navbar bars in smaller screens is not working
+- When I click a button I should see a popup/modal with more information and tools used for each project so that I can have more information about each project. 
+- My navbar should display a "hamburguer" button so that I can select different links. 
 - Size of containers need to improve for smaller sizes
-- Spacing has to improve
+- Padding of different containers feels weird
 - Recreate this site using React and a no-code platform (WebFlow)
 - Store each project in a database collection (firebase) and fetch data.
-
 
 
 ## Outline
