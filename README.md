@@ -27,15 +27,11 @@ In terms of design, I tried keep a modern and clean site. Using a font from Goog
 
 
 ## Issues, things to improve and Challenges to be done by the end of the program
-- When I click a button I should see a popup/modal with more information and tools used for each project so that I can have more information about each project.. 
-- My navbar should display a "hamburguer" button so that I can select different links. 
-- Size of containers need to improve for smaller sizes
-- Padding of different containers feels weird
+ 
+- My navbar should display a "hamburguer" button so that I can select different links. (Bug to be fixed)
+- Popup may have more information about the project and tools used.
 - Recreate this site using React and a no-code platform (WebFlow)
 - Store each project in a database collection (firebase) and fetch data.
-
-
-
 
 # About the Project
 ## Outline
