@@ -1,6 +1,6 @@
 # PORTFOLIO
 
-This is the first project of our program. 
+This is the first project of our program. I like to show this old version of my portfolio, not to show my current abilities but it serves as a good display of how far I've come!
 
 I followed a basic landing page structure:
 -   Welcome Message
