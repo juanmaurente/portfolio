@@ -36,6 +36,7 @@ Source Code Pro
   }
 }
 
+/* sass --watch --no-source-map style.scss style.css */
 /*--------------------------GENERAL STYLING ---------------- */
 * {
   margin: 0px;
@@ -45,8 +46,8 @@ Source Code Pro
 html,
 body {
   font-family: "Exo", sans-serif;
-  background-color: #252426;
-  color: #c6c0be;
+  background-color: #353440;
+  color: #f2f2f2;
   scroll-behavior: smooth;
 }
 
@@ -56,24 +57,29 @@ body {
   color: #fca4a4;
   font-size: 25px;
   letter-spacing: 2px;
-  font-weight: 300;
-  margin: 50px auto;
+  font-weight: 800;
+  margin: 30px auto;
   text-align: center;
 }
 
 /*--------------------------NAVBAR ---------------- */
 .navbar {
   position: sticky;
+  background-color: rgba(53, 52, 64, 0.5568627451);
   top: 0px;
   z-index: 55555;
-  background-color: #353440;
   display: flex;
   justify-content: space-around;
   height: 75px;
-  overflow: hidden;
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    position: relative;
+  }
 }
 .navbar__logo {
   color: #fca4a4;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1215686275);
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -86,60 +92,70 @@ body {
   font-weight: 300;
 }
 .navbar__links {
-  color: #fca4a4;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
+.navbar__links > a {
+  color: #fca4a4;
+  text-decoration: none;
+  padding: 15px 10px;
+  border-radius: 2px;
+  display: block;
+}
 @media only screen and (max-width: 576px) {
-  .navbar__links {
+  .navbar__links > a {
     display: none;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .navbar__links {
+  .navbar__links > a {
     display: none;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .navbar__links {
+  .navbar__links > a {
     display: none;
   }
 }
-.navbar__link > a {
-  color: #c6c0be;
-  text-decoration: none;
-  padding: 15px 10px;
-  border-radius: 4px;
-  display: block;
-}
-.navbar__link > a:hover {
-  background-color: #747c8c;
-  font-weight: bold;
-  color: #f2f2f2;
-  border-bottom: 1px solid #f2f2f2;
+.navbar__links > a:hover, .navbar__links > a:focus {
+  font-weight: bolder;
+  font-size: larger;
 }
 .navbar__link--icon {
   display: none;
+}
+@media only screen and (max-width: 576px) {
+  .navbar__link--icon {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar__link--icon {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .navbar__link--icon {
+    display: inline-block;
+  }
 }
 
 /*--------------------------WELCOME ---------------- */
 .welcome {
   height: 100vh;
-  margin: 80px auto;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
-  padding-top: 75px;
-  padding-top: 0px;
-  margin-top: 0px;
+  margin-top: -75px;
   justify-content: left;
   align-items: center;
+  width: 100%;
   background: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
   background-size: cover;
-  filter: grayscale(35%);
-  padding-left: 100px;
+  padding-left: 15%;
 }
 @media only screen and (max-width: 576px) {
   .welcome {
@@ -189,7 +205,7 @@ body {
 .welcome__title {
   color: #f2f2f2;
   font-size: 35px;
-  font-weight: 500;
+  font-weight: 800;
 }
 @media only screen and (max-width: 576px) {
   .welcome__title {
@@ -203,17 +219,16 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-align: left;
 }
 .about__container {
-  width: 85%;
-  padding: 45px;
+  width: 50rem;
+  padding: 40px;
   background-color: rgba(198, 192, 190, 0.0549019608);
-  border-radius: 25px;
+  border-radius: 2px;
 }
 @media only screen and (max-width: 576px) {
   .about__container {
-    width: 90vw;
+    width: 50rem;
   }
 }
 .about__block {
@@ -248,10 +263,8 @@ body {
 }
 .about__block--right {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
   padding-left: 15px;
 }
 @media only screen and (max-width: 576px) {
@@ -277,7 +290,7 @@ body {
 .about__img {
   width: 300px;
   height: 300px;
-  border-radius: 25px;
+  border-radius: 150px;
   object-fit: cover;
 }
 .about__text {
@@ -393,10 +406,9 @@ body {
 /*--------------------------CONTACT ---------------- */
 .contact {
   height: 100vh;
-  margin: 80px auto;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
-  padding-top: 75px;
 }
 @media only screen and (max-width: 576px) {
   .contact {

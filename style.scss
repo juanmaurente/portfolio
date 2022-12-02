@@ -1,3 +1,5 @@
+/* sass --watch --no-source-map style.scss style.css */
+
 @use './partials/devices';
 @use './partials/palette' as colors;
 @use './partials/fonts' as fonts;
@@ -12,8 +14,8 @@
 html,
 body {
 	font-family: fonts.$font-exo;
-	background-color: colors.$Background-Black;
-	color: colors.$Text-Silver;
+	background-color: #353440;
+	color: #f2f2f2;
 	scroll-behavior: smooth;
 }
 
@@ -26,16 +28,20 @@ body {
 /*--------------------------NAVBAR ---------------- */
 .navbar {
 	position: sticky;
+	background-color: #3534408e;
 	top: 0px;
 	z-index: 55555;
-	background-color: #353440;
 	display: flex;
 	justify-content: space-around;
 	height: 75px;
-	overflow: hidden;
+
+	@include devices.phone {
+		position: relative;
+	}
 
 	&__logo {
 		color: #fca4a4;
+		text-shadow: 2px 2px #0000001f;
 		font-size: 20px;
 		display: flex;
 		align-items: center;
@@ -51,43 +57,53 @@ body {
 	}
 
 	&__links {
-		color: #fca4a4;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 300;
 		display: flex;
 		flex-wrap: nowrap;
 		align-items: center;
 
-		@include devices.phone {
-			display: none;
-		}
+		& > a {
+			color: #fca4a4;
+			text-decoration: none;
+			padding: 15px 10px;
+			border-radius: 2px;
+			display: block;
 
-		@include devices.tablet {
-			display: none;
-		}
+			@include devices.phone {
+				display: none;
+			}
 
-		@include devices.tablet-landscape {
-			display: none;
+			@include devices.tablet {
+				display: none;
+			}
+
+			@include devices.tablet-landscape {
+				display: none;
+			}
+
+			&:hover,
+			&:focus {
+				font-weight: bolder;
+				font-size: larger;
+			}
 		}
 	}
 
 	&__link {
-		& > a {
-			color: #c6c0be;
-			text-decoration: none;
-			padding: 15px 10px;
-			border-radius: 4px;
-			display: block;
-
-			&:hover {
-				background-color: #747c8c;
-				font-weight: bold;
-				color: #f2f2f2;
-				border-bottom: 1px solid #f2f2f2;
-			}
-		}
 		&--icon {
 			display: none;
+			@include devices.phone {
+				display: inline-block;
+			}
+
+			@include devices.tablet {
+				display: inline-block;
+			}
+
+			@include devices.tablet-landscape {
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -95,15 +111,14 @@ body {
 /*--------------------------WELCOME ---------------- */
 .welcome {
 	@include mixins.section-body;
-
-	padding-top: 0px;
-	margin-top: 0px;
+	margin-top: -75px;
 	justify-content: left;
 	align-items: center;
+	width: 100%;
 	background: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
 	background-size: cover;
-	filter: grayscale(35%);
-	padding-left: 100px;
+	// filter: grayscale(35%);
+	padding-left: 15%;
 
 	@include devices.phone {
 		justify-content: left;
@@ -129,7 +144,7 @@ body {
 	&__title {
 		color: #f2f2f2;
 		font-size: 35px;
-		font-weight: 500;
+		font-weight: 800;
 
 		@include devices.phone {
 			font-size: 30px;
@@ -141,16 +156,15 @@ body {
 .about {
 	@extend %section-body;
 	@include mixins.flex-center;
-	text-align: left;
 
 	&__container {
-		width: 85%;
-		padding: 45px;
+		width: 50rem;
+		padding: 40px;
 		background-color: #c6c0be0e;
-		border-radius: 25px;
+		border-radius: 2px;
 
 		@include devices.phone {
-			width: 90vw;
+			width: 50rem;
 		}
 	}
 
@@ -174,10 +188,8 @@ body {
 
 		&--right {
 			display: flex;
-			flex-wrap: wrap;
 			flex-direction: column;
-			justify-content: space-around;
-			align-items: flex-start;
+			justify-content: center;
 			padding-left: 15px;
 
 			@include devices.phone {
@@ -201,7 +213,7 @@ body {
 	&__img {
 		width: 300px;
 		height: 300px;
-		border-radius: 25px;
+		border-radius: 150px;
 		object-fit: cover;
 	}
 
