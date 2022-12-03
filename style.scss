@@ -91,7 +91,6 @@ body {
 	}
 
 	&__link {
-<<<<<<< HEAD
 		&--icon {
 			display: none;
 			@include devices.phone {
@@ -104,41 +103,6 @@ body {
 
 			@include devices.tablet-landscape {
 				display: inline-block;
-=======
-		display: flex;
-		& > a {
-			color: #c6c0be;
-			text-decoration: none;
-			padding: 15px 10px;
-			border-radius: 4px;
-			display: block;
-
-			&:hover {
-				background-color: #747c8c;
-				font-weight: bold;
-				color: #f2f2f2;
-				border-bottom: 1px solid #f2f2f2;
-			}
-		}
-		&--icon > a {
-			justify-content: center;
-			align-items: center;
-			color: #c6c0be;
-			text-decoration: none;
-			padding: 15px 10px;
-			border-radius: 4px;
-
-			@include devices.phone {
-				display: inline;
-			}
-
-			@include devices.tablet {
-				display: inline;
-			}
-
-			@include devices.tablet-landscape {
-				display: inline;
->>>>>>> 4db644910ce91a238d6bcb04c0cba93284d213da
 			}
 		}
 	}
@@ -147,13 +111,7 @@ body {
 /*--------------------------WELCOME ---------------- */
 .welcome {
 	@include mixins.section-body;
-<<<<<<< HEAD
 	margin-top: -75px;
-=======
-	height: 100vh;
-	padding-top: 0px;
-	margin-top: 0px;
->>>>>>> 4db644910ce91a238d6bcb04c0cba93284d213da
 	justify-content: left;
 	align-items: center;
 	width: 100%;
