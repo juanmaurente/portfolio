@@ -6,7 +6,9 @@
 @use './partials/mixins' as mixins;
 @use './partials/placeholders';
 /*--------------------------GENERAL STYLING ---------------- */
-* {
+*,
+*::before,
+*::after {
 	margin: 0px;
 	padding: 0px;
 }
@@ -111,13 +113,13 @@ body {
 /*--------------------------WELCOME ---------------- */
 .welcome {
 	@include mixins.section-body;
+
+	display: flex;
 	margin-top: -75px;
 	justify-content: left;
 	align-items: center;
-	width: 100%;
 	background: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
 	background-size: cover;
-	// filter: grayscale(35%);
 	padding-left: 15%;
 
 	@include devices.phone {
@@ -159,7 +161,7 @@ body {
 
 	&__container {
 		width: 50rem;
-		padding: 40px;
+		padding: 50px;
 		background-color: #c6c0be0e;
 		border-radius: 2px;
 
@@ -234,41 +236,87 @@ body {
 /*--------------------------PROJECTS ---------------- */
 
 .projects {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	position: relative;
 	min-height: 100vh;
-	width: 80vw;
-	margin: 0px auto;
-	border-radius: 35px;
-	padding: 50px;
+	width: 100%;
+	padding-top: 75px;
+	margin: 0 auto;
 	background-color: #c6c0be0e;
 
 	&__gallery {
-		@include mixins.flex-center;
-		flex-wrap: wrap;
+		width: 50%;
+		padding: 3rem 10rem;
+		display: grid;
+		grid-template: repeat(4, 1fr) / repeat(4, 1fr);
 		gap: 15px;
+
+		@include devices.phone {
+			grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+		}
+
+		@include devices.tablet {
+			grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+		}
+
+		@include devices.tablet-landscape {
+			grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+		}
+
+		@include devices.laptop {
+			grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+		}
 	}
 
 	&__image {
-		height: 350px;
-		width: 400px;
 		border: 1px solid #c6c0be15;
 		border-radius: 5px;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		// box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.075);
 		overflow: hidden;
 		cursor: pointer;
-
-		& :hover > img {
-			transform: scale(1.1);
-		}
 
 		& > img {
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+		}
+
+		&:hover {
+			box-shadow: 1px 1px 20px #c6c0be1c;
 			transition: 0.2s linear;
+			transform: scale(1.05);
+		}
+
+		&--juli {
+			grid-column: 1 / span 2;
+			grid-row: 1 / span 2;
+		}
+
+		&--mid {
+			grid-column: 3 / span 2;
+			grid-row: 2 / span 2;
+		}
+
+		&--github {
+			display: flex;
+			flex-direction: column;
+			font-size: 3rem;
+			justify-content: center;
+			align-items: center;
+			transition: 0.1s linear;
+			background-color: #202025;
+
+			& > p {
+				padding-top: 10px;
+				font-weight: 300;
+				font-size: 1rem;
+			}
 
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(1.02);
 			}
 		}
 	}
@@ -334,7 +382,9 @@ body {
 
 /*--------------------------CONTACT ---------------- */
 .contact {
-	@include mixins.section-body;
+	@extend %section-body;
+	@include mixins.flex-center;
+
 	@include devices.phone {
 		height: 100%;
 	}
@@ -354,8 +404,9 @@ body {
 	&__container {
 		margin: 0px auto;
 		background-color: #c6c0be0e;
-		padding: 150px;
-		border-radius: 35px;
+		width: 50rem;
+		border-radius: 5px;
+		padding: 50px;
 	}
 
 	&__form {
@@ -387,11 +438,11 @@ body {
 	&__icons {
 		margin-top: 20px;
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 	}
 
 	&__icons > a {
-		margin-top: 25px;
+		padding: 20px;
 		text-decoration: none;
 		color: #c6c0be;
 
@@ -425,8 +476,7 @@ body {
 /*--------------------------Footer ---------------- */
 .footer {
 	@include mixins.flex-center;
-	height: 100vh;
-	margin-top: 0px;
+	height: 50vh;
 	background-color: #353440;
 	flex-direction: column;
 

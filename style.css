@@ -7,8 +7,10 @@
 
 ------- Fonts 
 Source Code Pro
-*/ /* change to mixin */ /* change to mixin */
-.about {
+*/
+/* change to mixin */
+/* change to mixin */
+.about, .contact {
   height: 100vh;
   margin: 80px auto;
   display: flex;
@@ -16,29 +18,31 @@ Source Code Pro
   padding-top: 75px;
 }
 @media only screen and (max-width: 576px) {
-  .about {
+  .about, .contact {
     height: 60vh;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .about {
+  .about, .contact {
     height: 70vh;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .about {
+  .about, .contact {
     height: 70vh;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-  .about {
+  .about, .contact {
     height: 80vh;
   }
 }
 
 /* sass --watch --no-source-map style.scss style.css */
 /*--------------------------GENERAL STYLING ---------------- */
-* {
+*,
+*::before,
+*::after {
   margin: 0px;
   padding: 0px;
 }
@@ -58,7 +62,8 @@ body {
   font-size: 25px;
   letter-spacing: 2px;
   font-weight: 800;
-  margin: 30px auto;
+  margin: 0px auto;
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -146,30 +151,28 @@ body {
 /*--------------------------WELCOME ---------------- */
 .welcome {
   height: 100vh;
-  margin: 20px auto;
+  margin: 0px auto;
   display: flex;
-  justify-content: center;
   margin-top: -75px;
   justify-content: left;
   align-items: center;
-  width: 100%;
   background: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
   background-size: cover;
   padding-left: 15%;
 }
 @media only screen and (max-width: 576px) {
   .welcome {
-    height: 60vh;
+    height: 80vh;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .welcome {
-    height: 70vh;
+    height: 80vh;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .welcome {
-    height: 70vh;
+    height: 80vh;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -222,7 +225,7 @@ body {
 }
 .about__container {
   width: 50rem;
-  padding: 40px;
+  padding: 50px;
   background-color: rgba(198, 192, 190, 0.0549019608);
   border-radius: 2px;
 }
@@ -307,42 +310,84 @@ body {
 
 /*--------------------------PROJECTS ---------------- */
 .projects {
-  position: relative;
-  min-height: 100vh;
-  width: 80vw;
-  margin: 0px auto;
-  border-radius: 35px;
-  padding: 50px;
-  background-color: rgba(198, 192, 190, 0.0549019608);
-}
-.projects__gallery {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 75px;
+  margin: 0 auto;
+  background-color: rgba(198, 192, 190, 0.0549019608);
+}
+.projects__gallery {
+  width: 50%;
+  padding: 3rem 10rem;
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(4, 1fr);
   gap: 15px;
 }
+@media only screen and (max-width: 576px) {
+  .projects__gallery {
+    grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .projects__gallery {
+    grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .projects__gallery {
+    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .projects__gallery {
+    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+  }
+}
 .projects__image {
-  height: 350px;
-  width: 400px;
   border: 1px solid rgba(198, 192, 190, 0.0823529412);
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   cursor: pointer;
-}
-.projects__image :hover > img {
-  transform: scale(1.1);
 }
 .projects__image > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: 0.2s linear;
 }
-.projects__image > img:hover {
-  transform: scale(1.1);
+.projects__image:hover {
+  box-shadow: 1px 1px 20px rgba(198, 192, 190, 0.1098039216);
+  transition: 0.2s linear;
+  transform: scale(1.05);
+}
+.projects__image--juli {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+.projects__image--mid {
+  grid-column: 3/span 2;
+  grid-row: 2/span 2;
+}
+.projects__image--github {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s linear;
+  background-color: #202025;
+}
+.projects__image--github > p {
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.projects__image--github:hover {
+  transform: scale(1.02);
 }
 .projects__popup {
   position: fixed;
@@ -405,30 +450,10 @@ body {
 
 /*--------------------------CONTACT ---------------- */
 .contact {
-  height: 100vh;
-  margin: 20px auto;
   display: flex;
   justify-content: center;
-}
-@media only screen and (max-width: 576px) {
-  .contact {
-    height: 60vh;
-  }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .contact {
-    height: 70vh;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .contact {
-    height: 70vh;
-  }
-}
-@media only screen and (min-width: 993px) and (max-width: 1200px) {
-  .contact {
-    height: 80vh;
-  }
+  align-items: center;
+  text-align: center;
 }
 @media only screen and (max-width: 576px) {
   .contact {
@@ -453,8 +478,9 @@ body {
 .contact__container {
   margin: 0px auto;
   background-color: rgba(198, 192, 190, 0.0549019608);
-  padding: 150px;
-  border-radius: 35px;
+  width: 50rem;
+  border-radius: 5px;
+  padding: 50px;
 }
 .contact__form {
   display: flex;
@@ -486,10 +512,10 @@ body {
 .contact__icons {
   margin-top: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .contact__icons > a {
-  margin-top: 25px;
+  padding: 20px;
   text-decoration: none;
   color: #c6c0be;
 }
@@ -523,8 +549,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
-  margin-top: 0px;
+  height: 50vh;
   background-color: #353440;
   flex-direction: column;
 }
