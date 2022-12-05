@@ -1,3 +1,8 @@
+const projects = {
+	title: 'Crypto Project',
+	content: 'This is an example',
+};
+
 document.querySelectorAll('.projects__gallery img').forEach((image) => {
 	image.onclick = () => {
 		document.querySelector('.projects__popup').style.display = 'block';
