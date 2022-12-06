@@ -164,6 +164,7 @@ body {
 		padding: 50px;
 		background-color: #c6c0be0e;
 		border-radius: 2px;
+		box-shadow: 1px 1px 20px #f2f2f21a;
 
 		@include devices.phone {
 			width: 50rem;
@@ -246,6 +247,8 @@ body {
 	padding-top: 75px;
 	margin: 0 auto;
 	background-color: #c6c0be0e;
+	border-radius: 2px;
+	box-shadow: 1px 1px 20px #f2f2f21a;
 
 	&__gallery {
 		width: 80%;
@@ -339,6 +342,11 @@ body {
 				padding-top: 10px;
 				font-weight: 300;
 				font-size: 1rem;
+
+				& > a {
+					text-decoration: none;
+					color: #f2f2f2;
+				}
 			}
 
 			&:hover {
@@ -433,6 +441,8 @@ body {
 		width: 50rem;
 		border-radius: 5px;
 		padding: 50px;
+		border-radius: 2px;
+		box-shadow: 1px 1px 20px #f2f2f21a;
 	}
 
 	&__form {
