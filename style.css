@@ -320,7 +320,7 @@ body {
   width: 80vw;
   padding-top: 75px;
   margin: 0 auto;
-  background-color: rgba(198, 192, 190, 0.0549019608);
+  background-color: rgba(198, 192, 190, 0.137254902);
   border-radius: 2px;
   box-shadow: 1px 1px 20px rgba(242, 242, 242, 0.1019607843);
 }
