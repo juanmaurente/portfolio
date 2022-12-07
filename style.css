@@ -424,7 +424,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.1s linear;
-  background-color: #202025;
+  background-color: rgba(32, 32, 37, 0.9098039216);
 }
 .projects__image--github > p {
   padding-top: 10px;
