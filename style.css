@@ -454,7 +454,7 @@ body {
   right: 10px;
   font-size: 40px;
   font-weight: bolder;
-  color: #e4e2e2;
+  color: rgba(228, 226, 226, 0.9254901961);
   cursor: pointer;
   z-index: 10;
 }
