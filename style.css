@@ -461,7 +461,7 @@ body {
 .projects__popup > h2 {
   position: absolute;
   bottom: 50px;
-  right: 50px;
+  left: 50px;
   font-size: 40px;
   font-weight: bolder;
   color: #e4e2e2;
