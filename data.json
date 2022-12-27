@@ -1,0 +1,46 @@
+{
+	"projects": [
+		{
+			"name": "juliacarriquiry.com",
+			"image": "./img/pexels-abhishek-saini-2929411.jpg",
+			"description": "Julia Carriquiry is a professional photographer living in Sydney, Austraila. This is a website was developed to show her portfolio, a contact form as well as a place to inspire others",
+			"alt": "juliacarriquiry.com",
+			"link": "https://www.juliacarriquiry.com/"
+		},
+		{
+			"name": "Comfy House",
+			"image": "./img/Screenshot 2022-08-10 095750.png",
+			"description": "Comfy house is a recreation of an e-commerce website to improve my front-end skills.",
+			"alt": "Comfy House",
+			"link": "https://comfy-house-juanmaurente.netlify.app/"
+		},
+		{
+			"name": "Calculator",
+			"image": "./img/Screenshot 2022-08-10 095338.png",
+			"description": "Calculator project is a recreation of the old Apple - iphone calculator. It performs basic operations of a calculator. This was my first JavaScript project.",
+			"alt": "Calculator",
+			"link": "https://juanmaurente.github.io/Calculator/"
+		},
+		{
+			"name": "Tech. e-commerce site",
+			"image": "./img/Screenshot 2022-08-10 095338.png",
+			"description": "Calculator project is a recreation of the old Apple - iphone calculator. It performs basic operations of a calculator. This was my first JavaScript project.",
+			"alt": "Tech. e-commerce site",
+			"link": "./img/183672771-ac5368e8-e0e5-4ff0-b62c-719faa35b99b.png"
+		},
+		{
+			"name": "Crypto Project",
+			"image": "./img/pexels-worldspectrum-844124.jpg",
+			"description": "This is a code-along project done in React which fetch crypto info from rapid-api and displays latest crypto market data.",
+			"alt": "Crypto Project",
+			"link": "#"
+		},
+		{
+			"name": "Github",
+			"image": "./img/pexels-worldspectrum-844124.jpg",
+			"description": "This is a code-along project done in React which fetch crypto info from rapid-api and displays latest crypto market data.",
+			"alt": "Crypto Project",
+			"link": "https://github.com/juanmaurente"
+		}
+	]
+}

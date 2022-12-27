@@ -3,6 +3,7 @@
 This is the first project of our program. I like to show this old version of my portfolio, not to show my current abilities but it serves as a good display of how far I've come!
 
 I followed a basic landing page structure:
+
 -   Welcome Message
 -   Navbar
 -   About Me / Tech Skills
@@ -11,29 +12,31 @@ I followed a basic landing page structure:
 -   Footer
 
 ## Languages and Tools
-- HTML
-- CSS
-- JavaScript
-- SASS
-- Formspree
-- Github
-- Jira
+
+-   HTML
+-   CSS
+-   JavaScript
+-   SASS
+-   Formspree
+-   Github
+-   Jira
 
 ## Design
+
 In terms of design, I tried keep a modern and clean site. Using a font from Google Fonts and a custom color palette.
 ![image](https://user-images.githubusercontent.com/26740359/183779931-f7d58203-6c84-499c-8a02-6d8bef91c407.png)
 ![image](https://user-images.githubusercontent.com/26740359/183779966-a22767be-935f-4406-8be8-74c3e32f9e6d.png)
 ![image](https://user-images.githubusercontent.com/26740359/183779882-d08bc188-bfd2-4b1c-96d4-f27ab9c90fb7.png)
 
-
 ## Issues, things to improve and Challenges to be done by the end of the program
- 
-- My navbar should display a "hamburguer" button so that I can select different links. (Bug to be fixed)
-- Popup may have more information about the project and tools used.
-- Recreate this site using React and a no-code platform (WebFlow)
-- Store each project in a database collection (firebase) and fetch data.
+
+-   My navbar should display a "hamburguer" button so that I can select different links. (Bug to be fixed)
+-   Popup may have more information about the project and tools used.
+-   Recreate this site using React and a no-code platform (WebFlow)
+-   Store each project in a database collection (firebase) and fetch data.
 
 # About the Project
+
 ## Outline
 
 It is time to put what you have been learning to the test here is your project brief!

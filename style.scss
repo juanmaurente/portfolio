@@ -87,7 +87,8 @@ body {
 			&:hover,
 			&:focus {
 				font-weight: bolder;
-				font-size: larger;
+				transition: 0.2s linear;
+				transform: scale(1.1);
 			}
 		}
 	}
@@ -319,14 +320,9 @@ body {
 			transform: scale(1.05);
 		}
 
-		&--juli {
-			grid-column: 1 / span 2;
-			grid-row: 1 / span 2;
-		}
-
-		&--mid {
-			grid-column: 3 / span 2;
-			grid-row: 2 / span 2;
+		&--big {
+			grid-column: span 2;
+			grid-row: span 2;
 		}
 
 		&--github {
